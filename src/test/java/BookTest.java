@@ -5,6 +5,6 @@ public class BookTest {
 
     @Before
     public void before(){
-        lotr = new Book("LOTR", "Tolkien", "Fantasy");
+        lotr = new Book("LOTR", "Tolkien", "Fantasy", true);
     }
 }

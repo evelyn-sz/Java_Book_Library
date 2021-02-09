@@ -26,4 +26,7 @@ public class Library {
         if (this.countBooks() < this.capacity)
         this.bookList.add(book);
     }
+
+//    public Book borrowBookAndMarkUnavailable() {
+//    }
 }
