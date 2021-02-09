@@ -7,25 +7,27 @@ public class LibraryTest {
     private Library wordFactory;
     private Book lotr;
     private Book hp;
-    private Book oceanography;
+    private Book ocean;
 
     @Before
     public void before(){
         wordFactory = new Library("Word Factory");
         lotr = new Book("LOTR", "Tolkien", "Fantasy");
         hp = new Book("Harry Potter", "Rowling", "Fantasy");
-        oceanography = new Book("Oceanography", "Thurman", "Science");
+        ocean = new Book("Oceanography", "Thurman", "Science");
+        wordFactory.addBook(lotr);
+        wordFactory.addBook(hp);
+        wordFactory.addBook(ocean);
+
     }
 
     @Test
     public void canAddBookToLibrary(){
-        wordFactory.addBook(lotr);
-        wordFactory.addBook(hp);
-        assertEquals(2, wordFactory.countBooks());
+        assertEquals(3, wordFactory.countBooks());
     }
     @Test
     public void canCountNumberOfBooks(){
-
+        assertEquals(3, wordFactory.countBooks());
     }
 
 }
